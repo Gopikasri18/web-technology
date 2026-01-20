@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nearest Odd Number - GET Method</title>
+</head>
+<body>
+
+<h2>Find Nearest Odd Number</h2>
+
+<!-- GET method form -->
+<form method="get">
+    Enter a number:
+    <input type="number" name="num" required>
+    <input type="submit" value="Find">
+</form>
+
+<p id="result"></p>
+
+<script>
+    // Get value from URL using GET method
+    const params = new URLSearchParams(window.location.search);
+    const num = params.get("num");
+
+    if (num !== null) {
+        let n = parseInt(num);
+
+        if (n % 2 !== 0) {
+            document.getElementById("result").innerHTML =
+                "The entered number " + n + " is already an odd number.";
+        } else {
+            document.getElementById("result").innerHTML =
+                "Nearest odd numbers are: " + (n - 1) + " and " + (n + 1);
+        }
+    }
+</script>
+
+</body>
+</html>

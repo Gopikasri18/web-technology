@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Float Positioning Example</title>
+
+    <!-- Combined CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #003366;
+        }
+
+        /* Container */
+        .container {
+            width: 400px;
+            height: 200px;
+            background-color: lightgray;
+            padding: 10px;
+        }
+
+        /* First floating box */
+        .box1 {
+            width: 150px;
+            height: 100px;
+            background-color: steelblue;
+            color: white;
+            float: left;
+            padding: 10px;
+        }
+
+        /* Second floating box overlapping */
+        .box2 {
+            width: 150px;
+            height: 100px;
+            background-color: darkorange;
+            color: white;
+            float: left;
+            margin-left: -50px;   /* overlap */
+            margin-top: 30px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>CSS Float Positioning</h2>
+
+    <div class="container">
+        <div class="box1">
+            Box 1
+        </div>
+
+        <div class="box2">
+            Box 2
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+
+    <!-- CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+        }
+
+        .container {
+            width: 400px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #003366;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 12px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0059b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            display: none;
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+        function showDetails() {
+            var name = document.getElementById("name").value;
+            var regno = document.getElementById("regno").value;
+            var dept = document.getElementById("dept").value;
+            var email = document.getElementById("email").value;
+            var mobile = document.getElementById("mobile").value;
+
+            if (name === "" || regno === "") {
+                alert("Please fill all required fields");
+                return false;
+            }
+
+            document.getElementById("rname").innerText = name;
+            document.getElementById("rregno").innerText = regno;
+            document.getElementById("rdept").innerText = dept;
+            document.getElementById("remail").innerText = email;
+            document.getElementById("rmobile").innerText = mobile;
+
+            document.getElementById("result").style.display = "block";
+            return false; // stop page refresh
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Student Registration Form</h2>
+
+        <form onsubmit="return showDetails()">
+            <label>Name</label>
+            <input type="text" id="name">
+
+            <label>Register Number</label>
+            <input type="text" id="regno">
+
+            <label>Department</label>
+            <input type="text" id="dept">
+
+            <label>Email</label>
+            <input type="email" id="email">
+
+            <label>Mobile Number</label>
+            <input type="text" id="mobile">
+
+            <button type="submit">Register</button>
+        </form>
+
+        <div id="result">
+            <h3>Registered Student Details</h3>
+            <p><b>Name:</b> <span id="rname"></span></p>
+            <p><b>Register No:</b> <span id="rregno"></span></p>
+            <p><b>Department:</b> <span id="rdept"></span></p>
+            <p><b>Email:</b> <span id="remail"></span></p>
+            <p><b>Mobile:</b> <span id="rmobile"></span></p>
+        </div>
+    </div>
+
+</body>
+</html>
