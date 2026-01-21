@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inline and Internal CSS</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3949ab;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .box {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background-color: #3949ab;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Inline and Internal CSS Example</h1>
+    <p>Demonstration of CSS Style Sheets</p>
+</header>
+
+<div class="content">
+
+    <!-- Inline CSS -->
+    <h2 style="color: #d32f2f; text-align: center;">Welcome</h2>
+
+    <div class="box">
+        <p style="font-size: 18px; color: #333;">
+            This paragraph uses <b>inline CSS</b> to change text size and color.
+        </p>
+    </div>
+
+    <div class="box">
+        <p>
+            This section is styled using <b>internal CSS</b> defined inside the
+            <code>&lt;style&gt;</code> tag.
+        </p>
+    </div>
+
+    <!-- Inline CSS -->
+    <button style="background-color: #d32f2f; color: white; padding: 8px 16px; border: none; border-radius: 5px;">
+        Click Me
+    </button>
+
+</div>
+
+<footer>
+    <p>© 2026 CSS Demonstration Page</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Absolute Positioning Example</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        /* Parent container */
+        .container {
+            width: 400px;
+            height: 250px;
+            margin: 40px auto;
+            position: relative;   /* Reference for absolute elements */
+            background-color: #ddd;
+            border: 2px solid #555;
+        }
+
+        /* Common box style */
+        .box {
+            width: 180px;
+            height: 120px;
+            position: absolute;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            line-height: 120px;
+            border-radius: 8px;
+        }
+
+        /* First element */
+        .box1 {
+            background-color: #3f51b5;
+            top: 40px;
+            left: 60px;
+        }
+
+        /* Second element (overlapping) */
+        .box2 {
+            background-color: #e91e63;
+            top: 70px;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Absolute Positioning Demo</h2>
+<p>Two elements overlapping using absolute positioning</p>
+
+<div class="container">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+</div>
+
+</body>
+</html>
