@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+
+        header {
+            background-color: #004aad;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        section {
+            flex: 3;
+            background-color: white;
+            padding: 20px;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        aside {
+            flex: 1;
+            background-color: #e6e6e6;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .job {
+            border-bottom: 1px solid #ccc;
+            padding: 15px 0;
+        }
+
+        footer {
+            background-color: #004aad;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #004aad;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #003080;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Smart Job Portal</h1>
+    <p>Find Your Dream Job</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Jobs</a>
+    <a href="#">Companies</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <section>
+        <h2>Latest Job Openings</h2>
+
+        <div class="job">
+            <h3>Web Developer</h3>
+            <p>Company: ABC Technologies</p>
+            <p>Location: Chennai</p>
+            <button>Apply Now</button>
+        </div>
+
+        <div class="job">
+            <h3>Java Programmer</h3>
+            <p>Company: XYZ Solutions</p>
+            <p>Location: Bangalore</p>
+            <button>Apply Now</button>
+        </div>
+
+        <div class="job">
+            <h3>UI/UX Designer</h3>
+            <p>Company: Creative Minds</p>
+            <p>Location: Coimbatore</p>
+            <button>Apply Now</button>
+        </div>
+    </section>
+
+    <aside>
+        <h3>Job Categories</h3>
+        <ul>
+            <li>IT Jobs</li>
+            <li>Banking</li>
+            <li>Marketing</li>
+            <li>Design</li>
+        </ul>
+
+        <h3>Search Jobs</h3>
+        <input type="text" placeholder="Keyword"><br><br>
+        <button>Search</button>
+    </aside>
+
+</div>
+
+<footer>
+    <p>© 2026 Smart Job Portal | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
