@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multimedia Web Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            background: rgba(0,0,0,0.3);
+        }
+
+        section {
+            margin: 30px auto;
+            width: 80%;
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: #4f46e5;
+        }
+
+        audio, video {
+            margin-top: 15px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        footer {
+            padding: 10px;
+            background: rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎵 Multimedia Web Page 🎬</h1>
+    <p>Embedding Audio and Video with Controls</p>
+</header>
+
+<section>
+    <h2>🎧 Audio Player</h2>
+    <p>Listen to the sample audio below</p>
+
+    <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</section>
+
+<section>
+    <h2>📹 Video Player</h2>
+    <p>Watch the sample video below</p>
+
+    <video controls poster="https://www.w3schools.com/html/img_snowtops.jpg">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<footer>
+    <p>© 2026 Web Technology Lab</p>
+</footer>
+
+</body>
+</html>

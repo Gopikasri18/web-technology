@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Management System</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #4f46e5, #06b6d4);
+        }
+
+        .container {
+            width: 75%;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4338ca;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 6px solid #6366f1;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #1e40af;
+        }
+
+        label {
+            display: block;
+            margin: 6px 0;
+        }
+
+        button {
+            display: block;
+            margin: 30px auto 0;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        #result {
+            margin-top: 30px;
+            padding: 20px;
+            background: #ecfeff;
+            border-radius: 15px;
+            display: none;
+        }
+
+        #result h2 {
+            color: #065f46;
+        }
+    </style>
+
+    <script>
+        function confirmDishes() {
+            let dishes = document.getElementsByName("dish");
+            let selected = [];
+
+            for (let i = 0; i < dishes.length; i++) {
+                if (dishes[i].checked) {
+                    selected.push(dishes[i].value);
+                }
+            }
+
+            let resultDiv = document.getElementById("result");
+
+            if (selected.length > 0) {
+                resultDiv.innerHTML =
+                    "<h2>✅ Confirmed Dishes</h2><ul>" +
+                    selected.map(d => "<li>" + d + "</li>").join("") +
+                    "</ul>";
+            } else {
+                resultDiv.innerHTML =
+                    "<h2>⚠️ No dishes selected</h2>";
+            }
+
+            resultDiv.style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🍴 Hotel Management System</h1>
+    <p class="subtitle">Select your favorite dishes and confirm your order</p>
+
+    <div class="menu">
+
+        <div class="card">
+            <h3>🍳 Breakfast</h3>
+            <label><input type="checkbox" name="dish" value="Idli"> Idli</label>
+            <label><input type="checkbox" name="dish" value="Dosa"> Dosa</label>
+            <label><input type="checkbox" name="dish" value="Pongal"> Pongal</label>
+            <label><input type="checkbox" name="dish" value="Poori"> Poori</label>
+        </div>
+
+        <div class="card">
+            <h3>🍛 Lunch</h3>
+            <label><input type="checkbox" name="dish" value="Veg Meals"> Veg Meals</label>
+            <label><input type="checkbox" name="dish" value="Curd Rice"> Curd Rice</label>
+            <label><input type="checkbox" name="dish" value="Sambar Rice"> Sambar Rice</label>
+        </div>
+
+        <div class="card">
+            <h3>🍗 Dinner</h3>
+            <label><input type="checkbox" name="dish" value="Chapati & Curry"> Chapati & Curry</label>
+            <label><input type="checkbox" name="dish" value="Fried Rice"> Fried Rice</label>
+            <label><input type="checkbox" name="dish" value="Biryani"> Biryani</label>
+        </div>
+
+        <div class="card">
+            <h3>🥤 Beverages</h3>
+            <label><input type="checkbox" name="dish" value="Tea"> Tea</label>
+            <label><input type="checkbox" name="dish" value="Coffee"> Coffee</label>
+            <label><input type="checkbox" name="dish" value="Fresh Juice"> Fresh Juice</label>
+        </div>
+
+    </div>
+
+    <button onclick="confirmDishes()">Confirm Order</button>
+
+    <div id="result"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mixed Frameset One File</title>
+</head>
+
+<frameset cols="30%,40%,30%" frameborder="1">
+
+    <!-- Frame 1 -->
+    <frame src="data:text/html,
+        <html><body>
+        <h2>Frame 1</h2>
+        <p>Contents of Frame 1</p>
+        </body></html>">
+
+    <!-- Middle column -->
+    <frameset rows="50%,50%">
+
+        <!-- Frame 2 -->
+        <frame src="data:text/html,
+            <html><body>
+            <h2>Frame 2</h2>
+            <p>Contents of Frame 2</p>
+            </body></html>">
+
+        <!-- Frame 3 -->
+        <frame src="data:text/html,
+            <html><body>
+            <h2>Frame 3</h2>
+            <p>Contents of Frame 3</p>
+            </body></html>">
+
+    </frameset>
+
+    <!-- Frame 4 -->
+    <frame src="data:text/html,
+        <html><body>
+        <h2>Frame 4</h2>
+        <p>Contents of Frame 4</p>
+        </body></html>">
+
+</frameset>
+
+</html>
